@@ -1,0 +1,120 @@
+#search-menu {
+  z-index            : 9999;
+  visibility         : hidden;
+  position           : fixed;
+  top                : -20em;
+  right              : 0;
+  left               : 0;
+  width              : 100%;
+  height             : 20em;
+  opacity            : 0;
+  background         : #E81656;
+  white-space        : nowrap;
+  -moz-transition    : 500ms ease all;
+  -webkit-transition : 500ms ease all;
+  transition         : 500ms ease all;
+}
+#search-menu h2{
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 300;
+
+}
+#search-menu.toggled {
+  visibility : visible;
+  top        : 0;
+  height     : 100vh;
+  opacity    : 1;
+}
+
+#search-menu .wrapper {
+  position : relative;
+  width    : 75%;
+  margin   : 25em auto 0 auto;
+  padding  : 0 1em;
+
+}
+
+#search-menu .wrapper input {
+  width         : 90%;
+  padding       : 0.125em 0 0.125em 0;
+  color         : #fff;
+  border        : none;
+  border-bottom : 3px solid #fff;
+  background    : transparent;
+  font-size     : 3.5em;
+  text-align: center;
+  visibility: visible;
+}
+#search-menu .wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+#search-menu .wrapper input:focus {
+  outline : none;
+}
+
+#search-menu .wrapper button {
+  display    : block;
+  position   : absolute;
+  top        : 110px;
+  right      : 0;
+  width      : 25%;
+  color      : #fff;
+  border     : none;
+  background : transparent;
+  font-size  : 2.7em;
+  transition : 500ms ease all;
+}
+
+#search-menu .wrapper button:hover {
+  color : #ccc;
+  cursor     : pointer;
+}
+
+#search-menu .wrapper button:focus {
+  outline : none;
+}
+
+#search-icon {
+  float      : right;
+  margin-top : 0.5em;
+  padding    : 0 0.5em 0.25em 0.5em;
+  color      : #333;
+  text-align : center;
+  font-size  : 1.8em;
+  transition : 500ms ease all;
+  cursor     : pointer;
+  position: relative;
+}
+
+#search-icon:hover {
+  color : #000;
+}
+
+.close {
+  
+  top : -15em;
+  color      : #fff;
+  font-size  : 1.35em;
+  cursor: pointer;
+  position: absolute; 
+}
+
+.close:hover{
+
+  animation: roll 1s;
+  transform: rotate(30deg);
+  opacity: .7;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
